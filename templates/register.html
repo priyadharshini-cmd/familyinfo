@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="container-fluid" style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+    <div class="col-md-6">
+        <div class="card bg-light">
+            <div class="card-header text-center bg-primary">
+                <h2 class="text-white"><i class="fa fa-users"></i> Registration</h2>
+            </div>
+            <div class="card-body">
+                <form method="POST" autocomplete="off">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" class="btn btn-primary btn-block" value="Register">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
